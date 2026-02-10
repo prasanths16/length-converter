@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length converter </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Fahrenheat to celcius</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Number">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()"> Convert to celcius</button>
+        </div>
+        <h2 id="h4"></h2>
+    </div>
+    <script >
+        function convert() {
+            let a = Number(document.getElementById("input").value)
+            let b = (a - 32) * 5 / 9
+            let c = document.getElementById("h4")
+            c.innerHTML= b.toFixed(2) + "  celsius"
+
+        }
+    </script>
+</body>
+
+</html>
